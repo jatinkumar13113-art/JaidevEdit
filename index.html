@@ -1,85 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Jaidev Edit – AI Photo & Video Editing</title>
-  <meta name="description" content="Jaidev Edit – AI Photo & Video Editing, Reels, CapCut Templates, Prompts">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Block Blast</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1 class="logo-animate">Jaidev Edit</h1>
-    <p>AI Photo & Video Editing • Reels • Prompts</p>
+<!-- START SCREEN -->
+<div id="startScreen">
+  <button id="startBtn">▶ START GAME</button>
+</div>
 
-    <div class="hero-buttons">
-      <a href="Category/capcut-template/">Explore Templates</a>
-      <a href="Category/new-image-prompt/" class="outline">AI Prompts</a>
-    </div>
-  </section>
+<!-- TOP BAR -->
+<div id="topbar">
+  <div class="pill">Score <b id="score">0</b></div>
+  <div class="pill">⭐ <b id="stars">0</b></div>
 
-  <!-- NAV -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="Category/capcut-template/">CapCut</a>
-    <a href="Category/gemini-prompt/">Gemini</a>
-    <a href="Category/new-image-prompt/">Image Prompt</a>
-    <a href="Category/vn-code/">VN Code</a>
-    <a href="Category/vn-template/">VN Template</a>
-  </nav>
+  <button id="bombBtn">💣 <span id="bombCount">3</span></button>
+  <button id="musicBtn">🔊</button>
+  <button id="pauseBtn">⏸</button>
 
-  <!-- MAIN -->
-  <main>
-    <h2>🔥 Popular Categories</h2>
+  <div class="pill">Level <b id="level">1</b></div>
+</div>
 
-    <div class="grid">
-      <a class="card" href="Category/capcut-template/">
-        <h3>CapCut Templates</h3>
-        <p>Trending reels & shorts templates</p>
-      </a>
+<!-- GAME -->
+<div id="gameWrap">
+  <div id="board"></div>
+  <div id="blocks"></div>
+</div>
 
-      <a class="card" href="Category/gemini-prompt/">
-        <h3>Gemini Prompts</h3>
-        <p>AI prompts for editing</p>
-      </a>
+<!-- PAUSE -->
+<div id="pauseOverlay">
+  <button id="resumeBtn">▶ RESUME</button>
+</div>
 
-      <a class="card" href="Category/new-image-prompt/">
-        <h3>Image Prompts</h3>
-        <p>Cinematic & realistic AI prompts</p>
-      </a>
+<div id="levelUpPopup">LEVEL UP!</div>
 
-      <a class="card" href="Category/vn-code/">
-        <h3>VN Codes</h3>
-        <p>VN editor codes & presets</p>
-      </a>
+<audio id="bgMusic" src="music.mp3" loop></audio>
 
-      <a class="card" href="Category/vn-template/">
-        <h3>VN Templates</h3>
-        <p>Ready VN templates for reels</p>
-      </a>
-    </div>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Jaidev Edit • All Rights Reserved</p>
-  </footer>
-
-  <!-- TELEGRAM POPUP -->
-  <div id="telegram-popup">
-    <div class="popup-box">
-      <span id="close-popup">×</span>
-      <h3>Join Jaidev Edit 🚀</h3>
-      <p>Daily AI prompts, reels & editing tips</p>
-      <a href="https://t.me/YOUR_TELEGRAM_USERNAME" target="_blank">
-        Join Telegram
-      </a>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+<script src="game.js"></script>
 </body>
 </html>
